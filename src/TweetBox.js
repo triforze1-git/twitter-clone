@@ -12,7 +12,7 @@ const TweetBox = () => {
                 </div>
                 <input 
                     className="tweetBox__imageInput"    
-                    placeholder="Enter Image URL" 
+                    placeholder="Optional: Enter Image URL" 
                     type="text"
                 />
 

@@ -11,25 +11,25 @@ const Post = ({ displayName, username, verified, text, image, avatar }) => {
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar src="https://i.pinimg.com/originals/a3/6f/84/a36f8418f940919690723f515f24d6b4.jpg" />
+                <Avatar src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Bryan Farrill {" "}
+                            {displayName} {" "}
                             <span className="post__headerSpecial">
-                                <VerifiedUserIcon className="post__badge" />
-                            @triforze1
+                                {verified && <VerifiedUserIcon className="post__badge" />}
+                            @{username}
                             </span>
                             
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>I challenge you to build a twitter clone using react</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img className="post__image" src="https://images.alphacoders.com/376/thumb-1920-37681.jpg" alt=""/>
+                <img className="post__image" src={image} alt=""/>
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
